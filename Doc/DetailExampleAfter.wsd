@@ -1,0 +1,16 @@
+@startuml 
+title After
+skinparam dpi 150
+
+object View
+object IRepository {
+	+Save()
+}
+object Repository {
+	+Save()
+}
+
+View -> IRepository
+IRepository <-- Repository
+
+@enduml

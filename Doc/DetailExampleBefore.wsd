@@ -1,0 +1,12 @@
+@startuml 
+title Before
+skinparam dpi 150
+
+object View
+object Repository {
+	+SaveToDB()
+}
+
+View --> Repository
+
+@enduml

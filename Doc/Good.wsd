@@ -1,0 +1,52 @@
+@startuml
+skinparam dpi 150
+
+'テレビクラス
+class Television {
+
+}
+
+'Factoriesクラス
+class Factories {
+	+IRecord CreateRecord()
+}
+
+'録画インターフェース
+interface IRecord {
+	+void Record()
+}
+
+'ビデオクラス
+class Video {
+	+void Record()
+}
+
+'ブルーレイクラス
+class Blu_ray {
+	+void Record()
+}
+
+'HDDクラス
+class HDD {
+	+void Record()
+}
+
+'Fakeクラス
+class Fake {
+	+void Record()
+}
+
+
+
+' クラス間の関係
+Television --|> IRecord
+Television --|> Factories
+IRecord <|-- Video
+IRecord <|-- Blu_ray
+IRecord <|-- HDD
+IRecord <|-- Fake
+Factories --|> Video
+Factories --|> Blu_ray
+Factories --|> HDD
+Factories --|> Fake
+@enduml

@@ -1,0 +1,36 @@
+@startuml
+skinparam dpi 150
+
+'テレビクラス
+class Television {
+
+}
+
+'ビデオクラス
+class Video {
+	+void Record()
+}
+
+'ブルーレイクラス
+class Blu_ray {
+	+void Record()
+}
+
+'HDDクラス
+class HDD {
+	+void Record()
+}
+
+'Fakeクラス
+class Fake {
+	+void Record()
+}
+
+
+
+' クラス間の関係
+Television --|> Video
+Television --|> Blu_ray
+Television --|> HDD
+Television --|> Fake
+@enduml
