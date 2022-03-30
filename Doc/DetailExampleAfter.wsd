@@ -10,7 +10,7 @@ object Repository {
 	+Save()
 }
 
-View -> IRepository
-IRepository <-- Repository
+View .> IRepository
+IRepository <.. Repository
 
 @enduml

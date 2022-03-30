@@ -39,14 +39,14 @@ class Fake {
 
 
 ' クラス間の関係
-Television --|> IRecord
-Television --|> Factories
-IRecord <|-- Video
-IRecord <|-- Blu_ray
-IRecord <|-- HDD
-IRecord <|-- Fake
-Factories --|> Video
-Factories --|> Blu_ray
-Factories --|> HDD
-Factories --|> Fake
+Television ..|> IRecord
+Television ..|> Factories
+IRecord <|.. Video
+IRecord <|.. Blu_ray
+IRecord <|.. HDD
+IRecord <|.. Fake
+Factories ..|> Video
+Factories ..|> Blu_ray
+Factories ..|> HDD
+Factories ..|> Fake
 @enduml

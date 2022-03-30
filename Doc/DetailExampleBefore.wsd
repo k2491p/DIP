@@ -7,6 +7,6 @@ object Repository {
 	+SaveToDB()
 }
 
-View --> Repository
+View ..> Repository
 
 @enduml
